@@ -27,7 +27,7 @@ public class WebSecurityConfig {
                 registry.addMapping("/**")
                         .allowCredentials(true)
                         .allowedMethods("HEAD", "GET", "PUT", "POST", "DELETE", "PATCH")
-                        .allowedOrigins("http://localhost:3000/");
+                        .allowedOrigins("https://ivanxc.github.io/");
             }
         };
     }
