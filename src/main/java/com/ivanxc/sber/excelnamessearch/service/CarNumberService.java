@@ -25,7 +25,7 @@ public class CarNumberService {
 
     public Optional<Set<String>> findNames(List<String> values) {
         Optional<Set<String>> foundNames;
-        try (InputStream file = ClassLoader.getSystemResourceAsStream(pathToExcel);
+        try (InputStream file = this.getClass().getResourceAsStream(pathToExcel);
              Workbook workbook = new XSSFWorkbook(file)) {
             Sheet sheet = workbook.getSheetAt(0);
             foundNames = findNames(sheet, values);
